@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: "Cinzel Decorative", cursive;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  filter: blur(0.5px);
+}
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: 5px;
+  font-weight: 400;
+  word-spacing: 5px;
+}
+h2 {
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+  font-size: 500;
+  padding-top: 1.5rem;
+}
+.orange {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background: linear-gradient(to left bottom, orange 0%, #ff0000 100%);
+  position: absolute;
+  right: 15%;
+  top: 10px;
+  /* box-shadow: 5px 5px 100px #ff8a05; */
+}
+
+.purple {
+  height: 280px;
+  width: 280px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to top right,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(85, 3, 186, 1) 100%
+  );
+  position: absolute;
+  bottom: 10px;
+  left: 15%;
+  /* box-shadow: 5px 5px 100px rgba(238, 174, 202, 1); */
+}
+
+.App {
+  width: 60rem;
+  height: 500px;
+  position: relative;
+  /* backdrop-filter: blur(30px); */
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fcfcff;
+  text-align: center;
+  border-top-right-radius: 150px;
+  border-bottom-left-radius: 150px;
+}
+.App h1 {
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+.App input {
+  background: transparent;
+  height: 3rem;
+  width: 22rem;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 1.8rem 3rem;
+  font-family: "Cinzel Decorative", cursive;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  outline: 0;
+}
+.App input:focus {
+  border: 5px solid #fff;
+}
+.App input::placeholder {
+  color: #fff;
+}
+
+.weather {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 180px;
+  list-style-type: none;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+.weather li:nth-child(1) {
+  border-bottom-left-radius: 5px;
+}
+.day {
+  width: 7rem;
+  height: 9rem;
+  line-height: 2.5rem;
+  font-size: 1.3rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  padding: 1rem 0rem;
+}
+.day span {
+  font-size: 3rem;
+}
+.loader {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+@media (max-width: 404px) {
+  .purple,
+  .orange {
+    width: 150px;
+    height: 150px;
+  }
+  .purple {
+    left: 0;
+    bottom: 0;
+  }
+  .orange {
+    right: 0;
+    top: 0;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  .App input {
+    width: 18rem;
+    padding: 0rem 1.3rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  .App {
+    width: 90%;
+  }
+  .weather {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .day {
+    font-size: 1rem;
+    width: 5rem;
+    height: 6rem;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+  }
+  .day span {
+    font-size: 1.5rem;
+  }
+}
