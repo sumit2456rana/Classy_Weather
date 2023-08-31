@@ -12,7 +12,7 @@ class App extends Component {
       isLoading: false
     };
     this.handleSetLocation = this.handleSetLocation.bind(this);
-  }
+  } 
   handleSetLocation(e) {
     this.setState(() => {
       return { location: e.target.value };
